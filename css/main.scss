@@ -245,7 +245,7 @@ $icon-size: rem(30);
       }
 
       .active-circle.home {
-        transform: translateX(rem(37));
+        transform: translateX(rem(40));
       }
     }
 
@@ -266,7 +266,7 @@ $icon-size: rem(30);
 
       &.home {
         color: #333;
-        left: rem(5);
+        left: rem(4);
         transform: translateX(0);
       }
 

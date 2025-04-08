@@ -615,7 +615,7 @@
   transform: translateX(-88%);
 }
 .app-header .header-right .segment-control.toggled .active-circle.home {
-  transform: translateX(2.3125rem);
+  transform: translateX(2.5rem);
 }
 .app-header .header-right .active-circle {
   display: flex;
@@ -634,7 +634,7 @@
 }
 .app-header .header-right .active-circle.home {
   color: #333;
-  left: 0.3125rem;
+  left: 0.25rem;
   transform: translateX(0);
 }
 .app-header .header-right .active-circle.easy {
