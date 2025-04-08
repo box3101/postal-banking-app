@@ -671,6 +671,11 @@ $icon-size: rem(30);
   left: rem(20);
   z-index: 10;
 
+  // 폴드 folded 모드일때
+  @media screen and (min-width: 600px) {
+    bottom: rem(20);
+  }
+
   .pagination-buttons {
     display: flex;
     align-items: center;

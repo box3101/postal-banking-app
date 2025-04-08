@@ -988,6 +988,11 @@
   left: 1.25rem;
   z-index: 10;
 }
+@media screen and (min-width: 600px) {
+  .banner-pagination {
+    bottom: 1.25rem;
+  }
+}
 .banner-pagination .pagination-buttons {
   display: flex;
   align-items: center;
