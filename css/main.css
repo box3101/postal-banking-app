@@ -1245,20 +1245,20 @@
   align-items: center;
 }
 .fixed-chatbot .btn-chatbot img {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 4.375rem;
+  height: 4.375rem;
   border-radius: 50%;
 }
 .fixed-chatbot .btn-chatbot p {
   display: flex;
-  padding: 0.3125rem 0.625rem;
+  padding: 0.3125rem 0.9375rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.875rem;
   background: #444;
   color: #fff;
   text-align: center;
-  font-size: 0.625rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   box-sizing: border-box;
 }
