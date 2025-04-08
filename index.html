@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모바일 우체국 뱅킹</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="banking-app">
+      <div class="inner">
+        <!-- 앱 헤더 영역 -->
+        <div class="app-header">
+          <div class="header-left">
+            <span class="user-name"><b>김수진</b> <em>님</em></span>
+            <span class="user-tag">premium</span>
+          </div>
+          <div class="header-right">
+            <div class="segment-control">
+              <div class="active-circle home">홈</div>
+              <div class="segment-item item-easy">쉬운</div>
+            </div>
+            <div class="btn-group">
+              <button class="icon-btn notification"></button>
+              <button class="icon-btn menu"></button>
+            </div>
+            <div class="btn-group flex items-center">
+              <button class="icon-btn notification">
+                <img src="img/alarm-ico.svg" alt="알림" />
+              </button>
+              <button class="icon-btn menu">
+                <img src="img/menu-ico.svg" alt="메뉴" />
+              </button>
+            </div>
+            <script>
+              // Get all segment controls on the page
+              const segmentControls =
+                document.querySelectorAll(".segment-control");
+
+              // Add event listeners to each segment control
+              segmentControls.forEach((control) => {
+                // Add click event to entire control
+                control.addEventListener("click", function () {
+                  this.classList.toggle("toggled");
+                });
+              });
+            </script>
+          </div>
+        </div>
+
+        <!-- 메인 슬라이더 컨테이너 -->
+        <div class="main-slide-wrp">
+          <div class="main-slider">
+            <!-- 슬라이드 1 -->
+            <div class="slide active" id="slide-1">
+              <!-- 헤더 영역 -->
+              <div class="header">
+                <div class="header-left">
+                  <i class="icon icon-thumbnail"></i>
+                  <div class="account-info">
+                    <p class="account-label">
+                      <span>한도제한</span>
+                      <em>e-Postasdasdasdasdsad</em>
+                    </p>
+                    <div class="flex items-center gap-6">
+                      <span class="account-number">012345-23-123342</span>
+                      <button class="icon icon-sm icon-copy"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-right">
+                  <div class="quick-transfer">
+                    <span>빠른이체</span>
+                    <label class="custom-toggle">
+                      <input type="checkbox" />
+                      <span class="toggle-track"></span>
+                    </label>
+                  </div>
+                  <button type="button" class="btn-more">
+                    <i class="icon icon-sm icon-more"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 잔액 영역 -->
+              <div class="balance-area">
+                <div class="balance-display">
+                  <span class="balance-amount"
+                    >1,000,000<span class="won">원</span></span
+                  >
+                  <button class="icon-hide">숨김</button>
+                </div>
+
+                <!-- 빠른 이체 영역 -->
+                <div class="quick-transfer-area">
+                  <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                  <button class="btn-add">
+                    <i class="icon icon-plus"></i>
+                  </button>
+                </div>
+
+                <!-- 버튼 영역 -->
+                <div class="action-buttons">
+                  <button class="btn-deposit">가져오기</button>
+                  <button class="btn-transfer">이체하기</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 슬라이드 2 -->
+            <div class="slide" id="slide-2">
+              <!-- 헤더 영역 -->
+              <div class="header">
+                <div class="header-left">
+                  <i class="icon icon-thumbnail"></i>
+                  <div class="account-info">
+                    <p class="account-label">
+                      <span>입출금</span>
+                      <em>우체국 예금</em>
+                    </p>
+                    <div class="flex items-center gap-6">
+                      <span class="account-number">098765-32-567890</span>
+                      <button class="icon icon-sm icon-copy"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-right">
+                  <div class="quick-transfer">
+                    <span>빠른이체</span>
+                    <label class="custom-toggle">
+                      <input type="checkbox" checked />
+                      <span class="toggle-track"></span>
+                    </label>
+                  </div>
+                  <button type="button" class="btn-more">
+                    <i class="icon icon-sm icon-more"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 잔액 영역 -->
+              <div class="balance-area">
+                <div class="balance-display">
+                  <span class="balance-amount"
+                    >1,000,000<span class="won">원</span></span
+                  >
+                  <button class="icon-hide">숨김</button>
+                </div>
+
+                <!-- 빠른 이체 영역 -->
+                <div class="quick-transfer-area">
+                  <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                  <button class="btn-add">
+                    <i class="icon icon-plus"></i>
+                  </button>
+                </div>
+
+                <!-- 버튼 영역 -->
+                <div class="action-buttons">
+                  <button class="btn-deposit">가져오기</button>
+                  <button class="btn-transfer">이체하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 슬라이드 네비게이션 -->
+          <div class="slide-navigation">
+            <div class="nav-dot active" data-slide="1"></div>
+            <div class="nav-dot" data-slide="2"></div>
+          </div>
+        </div>
+
+        <!-- 2번째 섹션: 배너 슬라이드 -->
+        <div class="banner-section">
+          <!-- Swiper -->
+          <div class="swiper bannerSwiper">
+            <div class="swiper-wrapper">
+              <!-- 배너 슬라이드 1 -->
+              <div class="swiper-slide banner-slider" id="banner-slide-1">
+                <img
+                  src="img/event-banner.png"
+                  alt="배너 슬라이드 이미지1"
+                  class="banner-image"
+                />
+              </div>
+
+              <!-- 배너 슬라이드 2 -->
+              <div class="swiper-slide banner-slider" id="banner-slide-2">
+                <img
+                  src="img/event-banner.png"
+                  alt="배너 슬라이드 이미지2"
+                  class="banner-image"
+                />
+              </div>
+            </div>
+
+            <!-- 배너 컨트롤 -->
+            <div class="banner-pagination">
+              <div class="pagination-buttons">
+                <button class="prev-button" aria-label="이전">
+                  <i class="icon icon-prev"></i>
+                </button>
+                <div class="page-indicator">
+                  <span class="current-page">1</span>
+                  <span class="total-pages">/2</span>
+                </div>
+                <button class="next-button" aria-label="다음">
+                  <i class="icon icon-next"></i>
+                </button>
+                <button class="pause-button" aria-label="일시정지">
+                  <i class="icon icon-pause"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3번째 섹션: 아이콘 메뉴 -->
+        <div class="menu-section">
+          <div class="menu-grid">
+            <!-- 첫 번째 줄 -->
+            <div class="menu-item">
+              <div class="menu-icon with-pin">
+                <img src="img/menu-icon1.svg" alt="전계좌 조회 아이콘" />
+              </div>
+              <div class="menu-label">전계좌 조회</div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-icon with-pin">
+                <img src="img/menu-icon2.svg" alt="거래내역 조회 아이콘" />
+              </div>
+              <div class="menu-label">거래내역 조회</div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-icon">
+                <img src="img/menu-icon3.svg" alt="카드조회 아이콘" />
+              </div>
+              <div class="menu-label">카드조회</div>
+            </div>
+
+            <!-- 두 번째 줄 -->
+            <div class="menu-item">
+              <div class="menu-icon">
+                <img src="img/menu-icon4.svg" alt="디지털 OTP 아이콘" />
+              </div>
+              <div class="menu-label">디지털 OTP</div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-icon">
+                <img src="img/menu-icon5.svg" alt="모바일 번호표 아이콘" />
+              </div>
+              <div class="menu-label">모바일 번호표</div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-icon">
+                <img src="img/menu-icon6.svg" alt="공과금 아이콘" />
+              </div>
+              <div class="menu-label">공과금</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4번째 섹션 -->
+        <div class="fortune-thoughts-section">
+          <button class="fortune-button">
+            <span class="fortune-icon">
+              <img src="img/fortune-icon.svg" alt="운세 아이콘" />
+            </span>
+            <span class="fortune-text">운세 서비스</span>
+          </button>
+
+          <button class="thoughts-button">
+            <span class="thoughts-icon">
+              <img src="img/thoughts-icon.svg" alt="좋은 생각 아이콘" />
+            </span>
+            <span class="thoughts-text">좋은 생각하기</span>
+          </button>
+        </div>
+
+        <!-- 공지사항 섹션 -->
+        <div class="notice-section">
+          <div class="notice-item">
+            <div class="notice-icon">
+              <img src="img/notice-icon.svg" alt="공지사항 아이콘" />
+            </div>
+            <div class="notice-content">
+              <div class="notice-title">
+                금융거래 목적 확인을 위한 서류제출 안내(‘25.8.28)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 고정 네비게이션 -->
+        <div class="bottom-navigation">
+          <div class="nav-item">
+            <img
+              src="img/shopping-gnb-default.svg"
+              alt="상품"
+              class="icon-default"
+            />
+            <img
+              src="img/shopping-gnb-pressed.svg"
+              alt="상품"
+              class="icon-pressed"
+            />
+            <span class="nav-label">상품</span>
+          </div>
+          <div class="nav-item">
+            <img
+              src="img/card-gnb-default.svg"
+              alt="카드"
+              class="icon-default"
+            />
+            <img
+              src="img/card-gnb-pressed.svg"
+              alt="카드"
+              class="icon-pressed"
+            />
+            <span class="nav-label">카드</span>
+          </div>
+          <div class="nav-item">
+            <img
+              src="img/fund-gnb-default.svg"
+              alt="펀드"
+              class="icon-default"
+            />
+            <img
+              src="img/fund-gnb-pressed.svg"
+              alt="펀드"
+              class="icon-pressed"
+            />
+            <span class="nav-label">펀드</span>
+          </div>
+          <div class="nav-item">
+            <img
+              src="img/fund-gnb-default-1.svg"
+              alt="생활"
+              class="icon-default"
+            />
+            <img
+              src="img/life-gnb-pressed.svg"
+              alt="생활"
+              class="icon-pressed"
+            />
+            <span class="nav-label">생활</span>
+          </div>
+          <div class="nav-item">
+            <img
+              src="img/benefit-gnb-default.svg"
+              alt="혜택"
+              class="icon-default"
+            />
+            <img
+              src="img/benefit-gnb-pressed.svg"
+              alt="혜택"
+              class="icon-pressed"
+            />
+            <span class="nav-label">혜택</span>
+          </div>
+        </div>
+
+        <!-- fixed 챗봇-->
+        <div class="fixed-chatbot">
+          <button class="btn-chatbot-close">
+            <img src="img/chatbot-close.svg" alt="챗봇 닫기" />
+          </button>
+          <button class="btn-chatbot">
+            <img src="img/chatbot-icon.svg" alt="챗봇 아이콘" />
+            <p>챗봇</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navDots = document.querySelectorAll(".nav-dot");
+    const slides = document.querySelectorAll(".main-slider .slide");
+    let currentIndex = 1;
+    const totalSlides = navDots.length;
+
+    // 슬라이드 변경 함수
+    function changeSlide(index) {
+      // 범위 체크
+      if (index < 1) index = 1;
+      if (index > totalSlides) index = totalSlides;
+
+      // 모든 슬라이드와 닷 비활성화
+      slides.forEach((slide) => slide.classList.remove("active"));
+      navDots.forEach((dot) => dot.classList.remove("active"));
+
+      // 선택한 슬라이드와 닷 활성화
+      document.getElementById(`slide-${index}`).classList.add("active");
+      document
+        .querySelector(`.nav-dot[data-slide="${index}"]`)
+        .classList.add("active");
+      currentIndex = index;
+    }
+
+    // 네비게이션 닷 클릭 이벤트
+    navDots.forEach((dot) => {
+      dot.addEventListener("click", function () {
+        changeSlide(parseInt(this.getAttribute("data-slide")));
+      });
+    });
+
+    // 간단한 스와이프 기능
+    const mainSlider = document.querySelector(".main-slider");
+    let touchStartX = 0;
+
+    mainSlider.addEventListener(
+      "touchstart",
+      (e) => (touchStartX = e.changedTouches[0].screenX)
+    );
+    mainSlider.addEventListener("touchend", (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > 50) {
+        changeSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
+      }
+    });
+
+    // 배너 슬라이드
+
+    // Swiper 인스턴스를 저장할 변수
+    let bannerSwiper;
+
+    // Swiper 초기화
+    bannerSwiper = new Swiper(".bannerSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".page-indicator",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"><span class="current-page">1</span></span>&nbsp;' +
+            '<span class="total-pages">/&nbsp;' +
+            '<span class="' +
+            totalClass +
+            '">3</span></span>'
+          );
+        },
+      },
+      navigation: {
+        nextEl: ".next-button",
+        prevEl: ".prev-button",
+      },
+      on: {
+        init: function () {
+          const pauseButton = document.querySelector(".pause-button");
+          const nextButton = document.querySelector(".next-button");
+          const prevButton = document.querySelector(".prev-button");
+
+          // 이곳에서는 'bannerSwiper' 대신 'this' 사용
+          function updateButtonStates() {
+            if (this.isBeginning) {
+              prevButton.classList.add("disabled");
+              prevButton.setAttribute("disabled", "disabled");
+            } else {
+              prevButton.classList.remove("disabled");
+              prevButton.removeAttribute("disabled");
+            }
+
+            if (this.isEnd) {
+              nextButton.classList.add("disabled");
+              nextButton.setAttribute("disabled", "disabled");
+            } else {
+              nextButton.classList.remove("disabled");
+              nextButton.removeAttribute("disabled");
+            }
+          }
+
+          // 현재 Swiper 인스턴스에 'this' 바인딩
+          updateButtonStates.call(this);
+
+          pauseButton.addEventListener(
+            "click",
+            function () {
+              if (this.autoplay.running) {
+                this.autoplay.stop();
+                pauseButton.setAttribute("aria-label", "재생");
+                pauseButton
+                  .querySelector(".icon")
+                  .classList.remove("icon-pause");
+                pauseButton.querySelector(".icon").classList.add("icon-play");
+              } else {
+                this.autoplay.start();
+                pauseButton.setAttribute("aria-label", "일시정지");
+                pauseButton
+                  .querySelector(".icon")
+                  .classList.remove("icon-play");
+                pauseButton.querySelector(".icon").classList.add("icon-pause");
+              }
+            }.bind(this)
+          ); // 이벤트 리스너에 'this' 바인딩
+
+          this.on(
+            "slideChange",
+            function () {
+              updateButtonStates.call(this);
+            }.bind(this)
+          ); // 이벤트 리스너에 'this' 바인딩
+        },
+      },
+    });
+
+    // 네비게이션 이벤트
+    const navItems = document.querySelectorAll(".nav-item");
+
+    // 기본 활성 상태 설정 (첫 번째 항목)
+    navItems[0].classList.add("active");
+
+    navItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        // 모든 항목에서 활성 클래스 제거
+        navItems.forEach((navItem) => {
+          navItem.classList.remove("active");
+        });
+
+        // 클릭한 항목에 활성 클래스 추가
+        this.classList.add("active");
+      });
+    });
+  });
+</script>
