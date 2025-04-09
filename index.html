@@ -57,125 +57,124 @@
 
         <!-- 메인 슬라이더 컨테이너 -->
         <div class="main-slide-wrp">
-          <div class="main-slider">
-            <!-- 슬라이드 1 -->
-            <div class="slide active" id="slide-1">
-              <!-- 헤더 영역 -->
-              <div class="header">
-                <div class="header-left">
-                  <i class="icon icon-thumbnail"></i>
-                  <div class="account-info">
-                    <p class="account-label">
-                      <span>한도제한</span>
-                      <em>e-Postasdasdasdasdsad</em>
-                    </p>
-                    <div class="flex items-center gap-6">
-                      <span class="account-number">012345-23-123342</span>
-                      <button class="icon icon-sm icon-copy"></button>
+          <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+              <!-- 슬라이드 1 -->
+              <div class="swiper-slide" id="slide-1">
+                <!-- 헤더 영역 -->
+                <div class="header">
+                  <div class="header-left">
+                    <i class="icon icon-thumbnail"></i>
+                    <div class="account-info">
+                      <p class="account-label">
+                        <span>한도제한</span>
+                        <em>e-Post</em>
+                      </p>
+                      <div class="flex items-center gap-6">
+                        <span class="account-number">012345-23-123342</span>
+                        <button class="icon icon-sm icon-copy"></button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="header-right">
-                  <div class="quick-transfer">
-                    <span>빠른이체</span>
-                    <label class="custom-toggle">
-                      <input type="checkbox" />
-                      <span class="toggle-track"></span>
-                    </label>
+                  <div class="header-right">
+                    <div class="quick-transfer">
+                      <span>빠른이체</span>
+                      <label class="custom-toggle">
+                        <input type="checkbox" />
+                        <span class="toggle-track"></span>
+                      </label>
+                    </div>
+                    <button type="button" class="btn-more">
+                      <i class="icon icon-sm icon-more"></i>
+                    </button>
                   </div>
-                  <button type="button" class="btn-more">
-                    <i class="icon icon-sm icon-more"></i>
-                  </button>
+                </div>
+
+                <!-- 잔액 영역 -->
+                <div class="balance-area">
+                  <div class="balance-display">
+                    <span class="balance-amount"
+                      >1,000,000<span class="won">원</span></span
+                    >
+                    <button class="icon-hide">숨김</button>
+                  </div>
+
+                  <!-- 빠른 이체 영역 -->
+                  <div class="quick-transfer-area">
+                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                    <button class="btn-add">
+                      <i class="icon icon-plus"></i>
+                    </button>
+                  </div>
+
+                  <!-- 버튼 영역 -->
+                  <div class="action-buttons">
+                    <button class="btn-deposit">가져오기</button>
+                    <button class="btn-transfer">이체하기</button>
+                  </div>
                 </div>
               </div>
 
-              <!-- 잔액 영역 -->
-              <div class="balance-area">
-                <div class="balance-display">
-                  <span class="balance-amount"
-                    >1,000,000<span class="won">원</span></span
-                  >
-                  <button class="icon-hide">숨김</button>
-                </div>
-
-                <!-- 빠른 이체 영역 -->
-                <div class="quick-transfer-area">
-                  <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
-                  <button class="btn-add">
-                    <i class="icon icon-plus"></i>
-                  </button>
-                </div>
-
-                <!-- 버튼 영역 -->
-                <div class="action-buttons">
-                  <button class="btn-deposit">가져오기</button>
-                  <button class="btn-transfer">이체하기</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- 슬라이드 2 -->
-            <div class="slide" id="slide-2">
-              <!-- 헤더 영역 -->
-              <div class="header">
-                <div class="header-left">
-                  <i class="icon icon-thumbnail"></i>
-                  <div class="account-info">
-                    <p class="account-label">
-                      <span>입출금</span>
-                      <em>우체국 예금</em>
-                    </p>
-                    <div class="flex items-center gap-6">
-                      <span class="account-number">098765-32-567890</span>
-                      <button class="icon icon-sm icon-copy"></button>
+              <!-- 슬라이드 2 -->
+              <div class="swiper-slide" id="slide-2">
+                <!-- 헤더 영역 -->
+                <div class="header">
+                  <div class="header-left">
+                    <i class="icon icon-thumbnail"></i>
+                    <div class="account-info">
+                      <p class="account-label">
+                        <span>입출금</span>
+                        <em>우체국 예금</em>
+                      </p>
+                      <div class="flex items-center gap-6">
+                        <span class="account-number">098765-32-567890</span>
+                        <button class="icon icon-sm icon-copy"></button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="header-right">
-                  <div class="quick-transfer">
-                    <span>빠른이체</span>
-                    <label class="custom-toggle">
-                      <input type="checkbox" checked />
-                      <span class="toggle-track"></span>
-                    </label>
+                  <div class="header-right">
+                    <div class="quick-transfer">
+                      <span>빠른이체</span>
+                      <label class="custom-toggle">
+                        <input type="checkbox" checked />
+                        <span class="toggle-track"></span>
+                      </label>
+                    </div>
+                    <button type="button" class="btn-more">
+                      <i class="icon icon-sm icon-more"></i>
+                    </button>
                   </div>
-                  <button type="button" class="btn-more">
-                    <i class="icon icon-sm icon-more"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- 잔액 영역 -->
-              <div class="balance-area">
-                <div class="balance-display">
-                  <span class="balance-amount"
-                    >1,000,000<span class="won">원</span></span
-                  >
-                  <button class="icon-hide">숨김</button>
                 </div>
 
-                <!-- 빠른 이체 영역 -->
-                <div class="quick-transfer-area">
-                  <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
-                  <button class="btn-add">
-                    <i class="icon icon-plus"></i>
-                  </button>
-                </div>
+                <!-- 잔액 영역 -->
+                <div class="balance-area">
+                  <div class="balance-display">
+                    <span class="balance-amount"
+                      >1,000,000<span class="won">원</span></span
+                    >
+                    <button class="icon-hide">숨김</button>
+                  </div>
 
-                <!-- 버튼 영역 -->
-                <div class="action-buttons">
-                  <button class="btn-deposit">가져오기</button>
-                  <button class="btn-transfer">이체하기</button>
+                  <!-- 빠른 이체 영역 -->
+                  <div class="quick-transfer-area">
+                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                    <button class="btn-add">
+                      <i class="icon icon-plus"></i>
+                    </button>
+                  </div>
+
+                  <!-- 버튼 영역 -->
+                  <div class="action-buttons">
+                    <button class="btn-deposit">가져오기</button>
+                    <button class="btn-transfer">이체하기</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 슬라이드 네비게이션 -->
-          <div class="slide-navigation">
-            <div class="nav-dot active" data-slide="1"></div>
-            <div class="nav-dot" data-slide="2"></div>
-          </div>
+          <!-- 슬라이드 네비게이션 (페이지네이션) -->
+          <div class="swiper-pagination"></div>
         </div>
 
         <!-- 2번째 섹션: 배너 슬라이드 -->
@@ -384,51 +383,18 @@
 </html>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const navDots = document.querySelectorAll(".nav-dot");
-    const slides = document.querySelectorAll(".main-slider .slide");
-    let currentIndex = 1;
-    const totalSlides = navDots.length;
-
-    // 슬라이드 변경 함수
-    function changeSlide(index) {
-      // 범위 체크
-      if (index < 1) index = 1;
-      if (index > totalSlides) index = totalSlides;
-
-      // 모든 슬라이드와 닷 비활성화
-      slides.forEach((slide) => slide.classList.remove("active"));
-      navDots.forEach((dot) => dot.classList.remove("active"));
-
-      // 선택한 슬라이드와 닷 활성화
-      document.getElementById(`slide-${index}`).classList.add("active");
-      document
-        .querySelector(`.nav-dot[data-slide="${index}"]`)
-        .classList.add("active");
-      currentIndex = index;
-    }
-
-    // 네비게이션 닷 클릭 이벤트
-    navDots.forEach((dot) => {
-      dot.addEventListener("click", function () {
-        changeSlide(parseInt(this.getAttribute("data-slide")));
-      });
-    });
-
-    // 간단한 스와이프 기능
-    const mainSlider = document.querySelector(".main-slider");
-    let touchStartX = 0;
-
-    mainSlider.addEventListener(
-      "touchstart",
-      (e) => (touchStartX = e.changedTouches[0].screenX)
-    );
-    mainSlider.addEventListener("touchend", (e) => {
-      const touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
-
-      if (Math.abs(diff) > 50) {
-        changeSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
-      }
+    // 메인 슬라이더 초기화
+    const mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // 추가 옵션
+      effect: "slide", // 또는 "fade", "cube", "coverflow", "flip" 등
+      speed: 300, // 전환 속도 (ms)
     });
 
     // 배너 슬라이드
