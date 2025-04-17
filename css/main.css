@@ -1277,8 +1277,7 @@
   background: #dfdfdf;
   box-shadow: 0px 2px 4px 1px #eaeaea;
 }
-.fortune-thoughts-section .fortune-text,
-.fortune-thoughts-section .thoughts-text {
+.fortune-thoughts-section .text {
   color: #222;
   font-size: 1rem;
   font-weight: 600;
