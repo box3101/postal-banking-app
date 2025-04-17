@@ -20,7 +20,11 @@
         <div class="app-header">
           <div class="header-left">
             <span class="user-name"><b>김수진</b> <em>님</em></span>
-            <span class="user-tag">premium</span>
+            <!-- <span class="user-tag user-tag--normal">일반</span>
+            <span class="user-tag user-tag--vip">VIP</span>
+            <span class="user-tag user-tag--mvp">MVP</span>
+            <span class="user-tag user-tag--s-mvp">S-MVP</span> -->
+            <span class="user-tag user-tag--premium">Premium</span>
           </div>
           <div class="header-right">
             <div class="segment-control">
@@ -77,13 +81,6 @@
                     </div>
                   </div>
                   <div class="header-right">
-                    <div class="quick-transfer">
-                      <span>빠른이체</span>
-                      <label class="custom-toggle">
-                        <input type="checkbox" />
-                        <span class="toggle-track"></span>
-                      </label>
-                    </div>
                     <button type="button" class="btn-more">
                       <i class="icon icon-sm icon-more"></i>
                     </button>
@@ -99,18 +96,26 @@
                     <button class="icon-hide">숨김</button>
                   </div>
 
-                  <!-- 빠른 이체 영역 -->
-                  <div class="quick-transfer-area">
-                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
-                    <button class="btn-add">
-                      <i class="icon icon-plus"></i>
-                    </button>
+                  <!-- 지난달 대비 증감 영역 -->
+                  <div class="balance-comparison">
+                    <span class="comparison-label">지난달 오늘 대비</span>
+                    <span class="comparison-value increase"
+                      ><span class="icon-up"></span> 54,100</span
+                    >
                   </div>
 
                   <!-- 버튼 영역 -->
                   <div class="action-buttons">
                     <button class="btn-deposit">가져오기</button>
                     <button class="btn-transfer">이체하기</button>
+                  </div>
+
+                  <!-- 빠른 이체 영역 -->
+                  <div class="quick-transfer-area">
+                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                    <button class="btn-add">
+                      <i class="icon icon-plus"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -123,23 +128,16 @@
                     <i class="icon icon-thumbnail"></i>
                     <div class="account-info">
                       <p class="account-label">
-                        <span>입출금</span>
-                        <em>우체국 예금</em>
+                        <span>한도제한</span>
+                        <em>e-Post</em>
                       </p>
                       <div class="flex items-center gap-6">
-                        <span class="account-number">098765-32-567890</span>
+                        <span class="account-number">012345-23-123342</span>
                         <button class="icon icon-sm icon-copy"></button>
                       </div>
                     </div>
                   </div>
                   <div class="header-right">
-                    <div class="quick-transfer">
-                      <span>빠른이체</span>
-                      <label class="custom-toggle">
-                        <input type="checkbox" checked />
-                        <span class="toggle-track"></span>
-                      </label>
-                    </div>
                     <button type="button" class="btn-more">
                       <i class="icon icon-sm icon-more"></i>
                     </button>
@@ -155,18 +153,26 @@
                     <button class="icon-hide">숨김</button>
                   </div>
 
-                  <!-- 빠른 이체 영역 -->
-                  <div class="quick-transfer-area">
-                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
-                    <button class="btn-add">
-                      <i class="icon icon-plus"></i>
-                    </button>
+                  <!-- 지난달 대비 증감 영역 -->
+                  <div class="balance-comparison">
+                    <span class="comparison-label">지난달 오늘 대비</span>
+                    <span class="comparison-value decrease"
+                      ><span class="icon-down"></span> 54,100</span
+                    >
                   </div>
 
                   <!-- 버튼 영역 -->
                   <div class="action-buttons">
                     <button class="btn-deposit">가져오기</button>
                     <button class="btn-transfer">이체하기</button>
+                  </div>
+
+                  <!-- 빠른 이체 영역 -->
+                  <div class="quick-transfer-area">
+                    <p class="no-quick-transfer">등록된 빠른 이체가 없습니다</p>
+                    <button class="btn-add">
+                      <i class="icon icon-plus"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -268,20 +274,53 @@
         </div>
 
         <!-- 4번째 섹션 -->
-        <div class="fortune-thoughts-section">
-          <button class="fortune-button">
-            <span class="fortune-icon">
-              <img src="img/fortune-icon.svg" alt="운세 아이콘" />
-            </span>
-            <span class="fortune-text">운세 서비스</span>
-          </button>
+        <div class="fortune-thoughts-section-wrp">
+          <div class="section-title">
+            <h2>혜택잇다 서비스</h2>
+          </div>
+          <div class="fortune-thoughts-section">
+            <button class="fortune-button">
+              <span class="fortune-icon">
+                <img src="img/fortune-icon.svg" alt="운세 서비스 아이콘" />
+              </span>
+              <span class="fortune-text">운세 서비스</span>
+            </button>
 
-          <button class="thoughts-button">
-            <span class="thoughts-icon">
-              <img src="img/thoughts-icon.svg" alt="좋은 생각 아이콘" />
-            </span>
-            <span class="thoughts-text">좋은 생각하기</span>
-          </button>
+            <button class="asset-button">
+              <span class="asset-icon">
+                <img src="img/asset-icon.svg" alt="자산관리 강화 아이콘" />
+              </span>
+              <span class="asset-text">자산관리 강화</span>
+            </button>
+
+            <button class="tourism-button">
+              <span class="tourism-icon">
+                <img src="img/tourism-icon.svg" alt="관광명소 소개 아이콘" />
+              </span>
+              <span class="tourism-text">관광명소 소개</span>
+            </button>
+
+            <button class="festival-button">
+              <span class="festival-icon">
+                <img src="img/festival-icon.svg" alt="지역축제 안내 아이콘" />
+              </span>
+              <span class="festival-text">지역축제 안내</span>
+            </button>
+
+            <button class="thoughts-button">
+              <span class="thoughts-icon">
+                <img src="img/thoughts-icon.svg" alt="좋은생각 읽기 아이콘" />
+              </span>
+              <span class="thoughts-text">좋은생각 읽기</span>
+            </button>
+
+            <button class="explore-button">
+              <span class="explore-icon">
+                <img src="img/explore-icon.svg" alt="더 둘러보기 아이콘" />
+              </span>
+              <span class="explore-text">더 둘러보기</span>
+            </button>
+          </div>
         </div>
 
         <!-- 공지사항 섹션 -->
