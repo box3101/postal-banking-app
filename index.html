@@ -19,44 +19,54 @@
         <!-- 앱 헤더 영역 -->
         <div class="app-header">
           <div class="header-left">
-            <span class="user-name"><b>김수진</b> <em>님</em></span>
-            <!-- <span class="user-tag user-tag--normal">일반</span>
-            <span class="user-tag user-tag--vip">VIP</span>
-            <span class="user-tag user-tag--mvp">MVP</span>
-            <span class="user-tag user-tag--s-mvp">S-MVP</span> -->
-            <span class="user-tag user-tag--premium">Premium</span>
+            <span>간편홈</span>
+            <div class="segment-control">
+              <div class="active-circle home"></div>
+              <div class="segment-item item-easy">OFF</div>
+            </div>
+            <script>
+              const segmentControls =
+                document.querySelectorAll(".segment-control");
+              const segmentItems = document.querySelectorAll(".segment-item");
+
+              segmentControls.forEach((control) => {
+                control.addEventListener("click", function () {
+                  this.classList.toggle("toggled");
+                  const item = this.querySelector(".segment-item");
+                  if (item.textContent === "OFF") {
+                    item.textContent = "ON";
+                  } else {
+                    item.textContent = "OFF";
+                  }
+                });
+              });
+            </script>
           </div>
           <div class="header-right">
-            <div class="segment-control">
-              <div class="active-circle home">홈</div>
-              <div class="segment-item item-easy">쉬운</div>
-            </div>
-            <div class="btn-group">
-              <button class="icon-btn notification"></button>
-              <button class="icon-btn menu"></button>
-            </div>
             <div class="btn-group flex items-center">
               <button class="icon-btn notification">
                 <img src="img/alarm-ico.svg" alt="알림" />
+              </button>
+              <button class="icon-btn chatbot">
+                <img src="img/chatbot-ico.svg" alt="챗봇" />
+              </button>
+              <button class="icon-btn search">
+                <img src="img/search-ico.svg" alt="검색" />
               </button>
               <button class="icon-btn menu">
                 <img src="img/menu-ico.svg" alt="메뉴" />
               </button>
             </div>
-            <script>
-              // Get all segment controls on the page
-              const segmentControls =
-                document.querySelectorAll(".segment-control");
-
-              // Add event listeners to each segment control
-              segmentControls.forEach((control) => {
-                // Add click event to entire control
-                control.addEventListener("click", function () {
-                  this.classList.toggle("toggled");
-                });
-              });
-            </script>
           </div>
+        </div>
+
+        <div class="user-info">
+          <span class="user-name"><b>김수진</b> <em>님</em></span>
+          <!-- <span class="user-tag user-tag--normal">일반</span>
+          <span class="user-tag user-tag--vip">VIP</span>
+          <span class="user-tag user-tag--mvp">MVP</span>
+          <span class="user-tag user-tag--s-mvp">S-MVP</span> -->
+          <span class="user-tag user-tag--premium">Premium</span>
         </div>
 
         <!-- 메인 슬라이더 컨테이너 -->
@@ -76,7 +86,12 @@
                       </p>
                       <div class="flex items-center gap-6">
                         <span class="account-number">012345-23-123342</span>
-                        <button class="icon icon-sm icon-copy"></button>
+                        <button
+                          class="btn-copy-text"
+                          aria-label="계좌번호 복사"
+                        >
+                          복사
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -98,15 +113,17 @@
 
                   <!-- 지난달 대비 증감 영역 -->
                   <div class="balance-comparison">
+                    (
                     <span class="comparison-label">지난달 오늘 대비</span>
                     <span class="comparison-value increase"
                       ><span class="icon-up"></span> 54,100</span
                     >
+                    )
                   </div>
 
                   <!-- 버튼 영역 -->
                   <div class="action-buttons">
-                    <button class="btn-deposit">가져오기</button>
+                    <button class="btn-deposit">거래내역</button>
                     <button class="btn-transfer">이체하기</button>
                   </div>
 

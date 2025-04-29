@@ -100,11 +100,10 @@ $icon-size: rem(30);
     height: 17px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='18' viewBox='0 0 4 18' fill='none'%3E%3Cpath d='M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2Z' fill='%23333333'/%3E%3Cpath d='M3.5 9C3.5 9.82843 2.82843 10.5 2 10.5C1.17157 10.5 0.5 9.82843 0.5 9C0.5 8.17157 1.17157 7.5 2 7.5C2.82843 7.5 3.5 8.17157 3.5 9Z' fill='%23333333'/%3E%3Cpath d='M3.5 16C3.5 16.8284 2.82843 17.5 2 17.5C1.17157 17.5 0.5 16.8284 0.5 16C0.5 15.1716 1.17157 14.5 2 14.5C2.82843 14.5 3.5 15.1716 3.5 16Z' fill='%23333333'/%3E%3C/svg%3E");
   }
-
   &-plus {
     width: 10px;
     height: 10px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M3.75 0H6.25V10H3.75V0Z' fill='%238C8C8C'/%3E%3Cpath d='M10 3.75V6.25H0L1.09278e-07 3.75L10 3.75Z' fill='%238C8C8C'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E");
   }
   &-prev {
     width: 8px;
@@ -142,74 +141,15 @@ $icon-size: rem(30);
     display: flex;
     align-items: center;
     gap: rem(8);
-
-    .user-name b {
-      color: #222;
-      text-align: center;
-      font-family: Pretendard;
-      font-size: rem(18);
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-decoration-line: underline;
-    }
-    em {
-      color: #222;
-      font-family: Pretendard;
-      font-size: rem(18);
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-
-    .user-tag {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-      padding: rem(4) rem(10);
-      border-radius: rem(6);
-      font-family: Pretendard;
-      font-size: rem(12);
-      font-weight: 700;
-      text-align: center;
-      
-      // 일반 태그 (기본)
-      &--normal {
-        background: #CAECFF;
-        color: #00A1FF;
-      }
-      
-      // VIP 태그
-      &--vip {
-        background: #A8F3DE;
-        color: #3F9D83;
-      }
-      
-      // MVP 태그
-      &--mvp {
-        background: #45C97C;
-        color: #FFF;
-      }
-      
-      // S-MVP 태그
-      &--s-mvp {
-        background: #FDC61C;
-        color: #FFF;
-      }
-      
-      // Premium 태그
-      &--premium {
-        background: #A375FF;
-        color: #FFF;
-      }
-    }
   }
 
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: rem(5);
+  .header-left {
+    span {
+      color: #333;
+      text-align: center;
+      font-size: rem(14);
+      font-weight: 500;
+    }
     .segment-control {
       display: inline-flex;
       padding: rem(4) rem(8) rem(4) rem(4);
@@ -227,11 +167,8 @@ $icon-size: rem(30);
 
       color: #fff;
       text-align: center;
-      font-family: Pretendard;
       font-size: rem(16);
-      font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
 
     .segment-items {
@@ -294,6 +231,7 @@ $icon-size: rem(30);
         color: #333;
         left: rem(4);
         transform: translateX(0);
+        text-indent: -9999px;
       }
 
       &.easy {
@@ -303,6 +241,12 @@ $icon-size: rem(30);
         transform: translateX(0);
       }
     }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
 
     .icon-btn {
       display: flex;
@@ -319,9 +263,78 @@ $icon-size: rem(30);
   }
 }
 
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  margin-top: rem(16);
+  .user-name b {
+    color: #222;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: rem(18);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+  em {
+    color: #222;
+    font-family: Pretendard;
+    font-size: rem(18);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .user-tag {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: rem(4) rem(10);
+    border-radius: rem(6);
+    font-family: Pretendard;
+    font-size: rem(12);
+    font-weight: 700;
+    text-align: center;
+
+    // 일반 태그 (기본)
+    &--normal {
+      background: #caecff;
+      color: #00a1ff;
+    }
+
+    // VIP 태그
+    &--vip {
+      background: #a8f3de;
+      color: #3f9d83;
+    }
+
+    // MVP 태그
+    &--mvp {
+      background: #45c97c;
+      color: #fff;
+    }
+
+    // S-MVP 태그
+    &--s-mvp {
+      background: #fdc61c;
+      color: #fff;
+    }
+
+    // Premium 태그
+    &--premium {
+      background: #a375ff;
+      color: #fff;
+    }
+  }
+}
+
 /* banking-app */
 .main-slide-wrp {
   margin: rem(10) 0;
+  margin-top: rem(16);
 }
 .mainSwiper {
   border-radius: rem(12);
@@ -345,15 +358,15 @@ $icon-size: rem(30);
 .mainSwiper .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: rem(15);
+  margin-bottom: rem(16);
 }
 
 .mainSwiper .header .header-left {
   display: flex;
   gap: rem(8);
   align-items: center;
-  max-width: 70%;
-  min-width: 65%;
+  max-width: 90%;
+  min-width: 90%;
 }
 
 .mainSwiper .header .header-left .icon-thumbnail {
@@ -402,6 +415,26 @@ $icon-size: rem(30);
   font-weight: 400;
   line-height: rem(14); /* 100% */
   letter-spacing: rem(-0.7);
+}
+
+.mainSwiper .header .header-left .account-info .btn-copy-text {
+  width: auto;
+  display: flex;
+  padding: rem(2) rem(8);
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #222;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  top: 2px;
+  &:active {
+    background: #f5f5f5;
+  }
 }
 
 .mainSwiper .header .header-right {
@@ -501,7 +534,6 @@ $icon-size: rem(30);
   width: rem(32);
   height: rem(32);
   border-radius: 50%;
-  background-color: #fff;
   color: #333;
   font-size: rem(12);
   font-style: normal;
@@ -542,19 +574,17 @@ $icon-size: rem(30);
 }
 
 .mainSwiper .balance-display .icon-hide {
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background-color: #fff;
   display: flex;
+  padding: 2px 8px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  padding: rem(6) rem(8);
-  border-radius: rem(24);
-  font-size: rem(14);
   color: #222;
-  font-weight: 400;
-  line-height: rem(14);
-  letter-spacing: -0.5px;
-  border-radius: 24px;
-  border: 1px solid #d9d9d9;
-  background: #fff;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .mainSwiper .balance-display .icon-hide:active {
@@ -566,15 +596,15 @@ $icon-size: rem(30);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: rem(6);
   margin-top: rem(6);
 }
 
 .mainSwiper .balance-comparison .comparison-label {
-  color: #888;
-  font-size: rem(14);
+  color: #222;
+  font-size: 14px;
   font-weight: 400;
-  line-height: rem(14); /* 87.5% */
+  line-height: 14px;
+  margin-right: rem(8);
 }
 
 .mainSwiper .balance-comparison .comparison-value {
@@ -617,12 +647,14 @@ $icon-size: rem(30);
 }
 
 .mainSwiper .quick-transfer-area .no-quick-transfer {
-  color: #8c8c8c;
-  font-size: rem(12);
   padding: rem(6) rem(12);
   border-radius: 24px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
+  color: #8c8c8c;
+  font-size: rem(12);
+  font-weight: 500;
+  line-height: rem(14);
 }
 
 .mainSwiper .quick-transfer-area .btn-add {
@@ -655,15 +687,15 @@ $icon-size: rem(30);
   padding: rem(14);
   border: none;
   border-radius: rem(8);
+  color: #222;
   font-size: rem(16);
   font-weight: 600;
-  cursor: pointer;
-  color: #222;
   line-height: rem(14);
 }
 
 .mainSwiper .action-buttons button.btn-deposit {
-  background-color: #f1f3f5;
+  border-radius: 8px;
+  background: #d4d4d4;
   color: #333;
 }
 
