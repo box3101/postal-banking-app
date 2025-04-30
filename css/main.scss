@@ -365,8 +365,8 @@ $icon-size: rem(30);
   display: flex;
   gap: rem(8);
   align-items: center;
-  max-width: 90%;
-  min-width: 90%;
+  max-width: 80%;
+  min-width: 80%;
 }
 
 .mainSwiper .header .header-left .icon-thumbnail {
@@ -440,7 +440,60 @@ $icon-size: rem(30);
 .mainSwiper .header .header-right {
   display: flex;
   align-items: center;
-  gap: rem(10);
+  position: absolute;
+  right: rem(6);
+  top: rem(8);
+  .segment-control {
+    height: rem(20);
+    display: inline-flex;
+    padding: rem(3) rem(6) rem(3) rem(4);
+    align-items: center;
+    gap: rem(4);
+    border-radius: rem(30);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    width: max-content;
+
+    // Default state (회색 배경)
+    .segment-circle {
+      display: inline-block;
+      width: rem(12);
+      height: rem(12);
+      border-radius: 50%;
+      background-color: white;
+      border: 1px solid #909090;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .segment-text {
+      color: #555;
+      text-align: center;
+      font-size: rem(12);
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    // Active state (파란색 배경)
+    &.active {
+      background-color: #1a73e8;
+      border-color: #1a73e8;
+      justify-content: space-between;
+
+      .segment-circle {
+        margin-right: 0;
+        order: 2;
+      }
+
+      .segment-text {
+        color: white;
+        order: 1;
+      }
+    }
+  }
 }
 
 .mainSwiper .header .header-right .quick-transfer {
@@ -531,8 +584,8 @@ $icon-size: rem(30);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: rem(32);
-  height: rem(32);
+  width: rem(24);
+  height: rem(24);
   border-radius: 50%;
   color: #333;
   font-size: rem(12);
@@ -575,7 +628,7 @@ $icon-size: rem(30);
 
 .mainSwiper .balance-display .icon-hide {
   border-radius: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.20);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #fff;
   display: flex;
   padding: 2px 8px;
@@ -715,6 +768,63 @@ $icon-size: rem(30);
 }
 
 /* Swiper 페이지네이션 커스터마이징 */
+
+/* 노란색 배경 */
+.main-slide-wrp.bg-yellow {
+  .mainSwiper {
+    background: #fbe59b;
+  }
+  .mainSwiper .action-buttons button.btn-deposit,
+  .mainSwiper .action-buttons button.btn-transfer {
+    background: #e3c353;
+  }
+  .mainSwiper .quick-transfer-area {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 빨간색 배경 */
+.main-slide-wrp.bg-red {
+  .mainSwiper {
+    background: #fbc1c6;
+  }
+  .mainSwiper .action-buttons button.btn-deposit,
+  .mainSwiper .action-buttons button.btn-transfer {
+    background: #f69fa6;
+  }
+  .mainSwiper .quick-transfer-area {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 파란색 배경 */
+.main-slide-wrp.bg-blue {
+  .mainSwiper {
+    background: #b9c7e3;
+  }
+  .mainSwiper .action-buttons button.btn-deposit,
+  .mainSwiper .action-buttons button.btn-transfer {
+    background: #94abd9;
+  }
+  .mainSwiper .quick-transfer-area {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 초록색 배경 */
+.main-slide-wrp.bg-green {
+  .mainSwiper {
+    background: #c7e3d5;
+  }
+  .mainSwiper .action-buttons button.btn-deposit,
+  .mainSwiper .action-buttons button.btn-transfer {
+    background: #97c2ac;
+  }
+  .mainSwiper .quick-transfer-area {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 .main-slide-wrp .swiper-pagination {
   position: relative;
   display: flex;
@@ -896,30 +1006,27 @@ $icon-size: rem(30);
 }
 
 .menu-section {
-  margin-top: rem(5);
-  padding: rem(10) rem(10);
-  border-radius: rem(12);
-  background: #fff;
-  box-shadow: 0px 2px 4px 1px #eaeaea;
+  margin-top: rem(20);
 
   .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: rem(16);
 
     .menu-item {
-      padding: rem(12) rem(0);
+      padding: rem(20) rem(0);
       display: flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
-      border-radius: rem(8);
+      border-radius: rem(12);
+      background: #fff;
+      box-shadow: 0px 2px 4px 1px #eaeaea;
       transition: background-color 0.2s ease;
 
       .menu-icon {
-        width: rem(36);
-        height: rem(36);
-        border-radius: rem(10);
-        background-color: #f5f5f5;
+        width: rem(32);
+        height: rem(32);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -927,32 +1034,17 @@ $icon-size: rem(30);
         background-repeat: no-repeat;
         background-size: rem(24) rem(24);
 
-        &.with-pin {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            top: rem(-3);
-            right: rem(-3);
-            width: rem(16);
-            height: rem(16);
-            background-image: url("../img/pin.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-        }
-
         &:active {
           background: #e0e0e0;
         }
       }
 
       .menu-label {
-        color: #222;
+        margin-top: rem(8);
+        color: #333;
         text-align: center;
         font-size: rem(16);
         font-weight: 600;
-        margin-top: rem(14);
       }
     }
   }
@@ -960,11 +1052,11 @@ $icon-size: rem(30);
 
 /* 운세 및 좋은 생각 섹션 스타일 */
 .fortune-thoughts-section-wrp {
-  padding: 22px 16px;
+  padding: rem(20) rem(16);
   background: #fff;
-  border-radius: 12px;
+  border-radius: rem(12);
   box-shadow: 0px 2px 4px 1px #eaeaea;
-  margin-top: rem(16);
+  margin-top: rem(24);
 
   .section-title {
     width: 100%;
@@ -991,19 +1083,6 @@ $icon-size: rem(30);
     gap: rem(6);
     border-radius: 8px;
     background: #f5f5f5;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: rem(8);
-      left: rem(8);
-      width: rem(12);
-      height: rem(12);
-      background-image: url("../img/link-more.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
 
     &:active {
       background: #dfdfdf;

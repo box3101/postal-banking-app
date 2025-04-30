@@ -70,7 +70,16 @@
         </div>
 
         <!-- 메인 슬라이더 컨테이너 -->
-        <div class="main-slide-wrp">
+
+        <!--
+          색상 변경
+          bg-yellow 
+          bg-red
+          bg-blue
+          bg-green
+        -->
+
+        <div class="main-slide-wrp bg-green">
           <div class="swiper mainSwiper">
             <div class="swiper-wrapper">
               <!-- 슬라이드 1 -->
@@ -81,8 +90,8 @@
                     <i class="icon icon-thumbnail"></i>
                     <div class="account-info">
                       <p class="account-label">
-                        <span>한도제한</span>
-                        <em>e-Post</em>
+                        <!-- <span>한도제한</span> -->
+                        <em>주거래</em>
                       </p>
                       <div class="flex items-center gap-6">
                         <span class="account-number">012345-23-123342</span>
@@ -95,11 +104,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="header-right">
+                  <div class="header-right flex items-center">
+                    <div class="segment-control-wrp">
+                      <div class="segment-control">
+                        <div class="segment-circle"></div>
+                        <div class="segment-text">빠른이체</div>
+                      </div>
+                    </div>
                     <button type="button" class="btn-more">
                       <i class="icon icon-sm icon-more"></i>
                     </button>
                   </div>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      const segmentControls = 
+                        document.querySelectorAll(
+                          ".main-slide-wrp .segment-control"
+                        );
+
+                      segmentControls.forEach((control) => {
+                        control.addEventListener("click", function () {
+                          this.classList.toggle("active");
+                        });
+                      });
+                    });
+                  </script>
                 </div>
 
                 <!-- 잔액 영역 -->
@@ -250,42 +279,42 @@
           <div class="menu-grid">
             <!-- 첫 번째 줄 -->
             <div class="menu-item">
-              <div class="menu-icon with-pin">
+              <div class="menu-icon">
                 <img src="img/menu-icon1.svg" alt="전계좌 조회 아이콘" />
               </div>
               <div class="menu-label">전계좌 조회</div>
             </div>
             <div class="menu-item">
-              <div class="menu-icon with-pin">
-                <img src="img/menu-icon2.svg" alt="거래내역 조회 아이콘" />
+              <div class="menu-icon">
+                <img src="img/menu-icon3.svg" alt="내카드조회 아이콘" />
               </div>
-              <div class="menu-label">거래내역 조회</div>
+              <div class="menu-label">내카드조회</div>
             </div>
             <div class="menu-item">
               <div class="menu-icon">
-                <img src="img/menu-icon3.svg" alt="카드조회 아이콘" />
+                <img src="img/menu-icon6.svg" alt="전화번호 송금 아이콘" />
               </div>
-              <div class="menu-label">카드조회</div>
+              <div class="menu-label">전화번호 송금</div>
             </div>
 
             <!-- 두 번째 줄 -->
             <div class="menu-item">
               <div class="menu-icon">
-                <img src="img/menu-icon4.svg" alt="디지털 OTP 아이콘" />
+                <img src="img/menu-icon2.svg" alt="송금받기 아이콘" />
               </div>
-              <div class="menu-label">디지털 OTP</div>
+              <div class="menu-label">송금받기</div>
             </div>
             <div class="menu-item">
               <div class="menu-icon">
-                <img src="img/menu-icon5.svg" alt="모바일 번호표 아이콘" />
+                <img src="img/menu-icon4.svg" alt="모바일번호표 아이콘" />
               </div>
-              <div class="menu-label">모바일 번호표</div>
+              <div class="menu-label">모바일번호표</div>
             </div>
             <div class="menu-item">
               <div class="menu-icon">
-                <img src="img/menu-icon6.svg" alt="공과금 아이콘" />
+                <img src="img/menu-icon5.svg" alt="고객센터안내 아이콘" />
               </div>
-              <div class="menu-label">공과금</div>
+              <div class="menu-label">고객센터안내</div>
             </div>
           </div>
         </div>
