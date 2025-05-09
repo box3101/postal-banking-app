@@ -576,7 +576,7 @@
   transform: translateX(100%);
 }
 .app-header .header-left .segment-control.toggled .segment-item.item-easy {
-  transform: translateX(-74%);
+  transform: translateX(-70%);
 }
 .app-header .header-left .segment-control.toggled .active-circle.home {
   transform: translateX(2.5rem);
