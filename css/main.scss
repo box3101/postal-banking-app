@@ -1055,7 +1055,7 @@ $icon-size: rem(30);
 
 /* 운세 및 좋은 생각 섹션 스타일 */
 .fortune-thoughts-section-wrp {
-  padding: rem(20) rem(16);
+  padding: rem(20) rem(14);
   background: #fff;
   border-radius: rem(12);
   box-shadow: 0px 2px 4px 1px #eaeaea;
@@ -1074,18 +1074,32 @@ $icon-size: rem(30);
 .fortune-thoughts-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: rem(10);
+  gap: rem(10) rem(10);
+
+  .fortune-icon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    padding: 4px 6px 4.571px 6px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    background: #fff;
+  }
 
   button {
+    padding-left: rem(7);
+    padding-right: rem(7);
     position: relative;
     height: rem(52);
     border-radius: rem(12);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: rem(6);
     border-radius: 8px;
     background: #f5f5f5;
+    gap:rem(5);
 
     &:active {
       background: #dfdfdf;
@@ -1095,8 +1109,11 @@ $icon-size: rem(30);
 
   .text {
     color: #222;
-    font-size: rem(16);
+    font-size: rem(15);
     font-weight: 600;
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 }
 
