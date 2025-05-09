@@ -1329,9 +1329,6 @@
   background-repeat: no-repeat;
   background-size: 1.5rem 1.5rem;
 }
-.menu-section .menu-grid .menu-item .menu-icon:active {
-  background: #e0e0e0;
-}
 .menu-section .menu-grid .menu-item .menu-label {
   margin-top: 0.625rem;
   color: #333;
