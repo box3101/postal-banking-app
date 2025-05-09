@@ -158,8 +158,8 @@ $icon-size: rem(30);
       border-radius: rem(20);
       background: #888;
       position: relative;
-      height: rem(36);
-      width: rem(78);
+      height: rem(32);
+      width: rem(72);
 
       &.toggled {
         background: #3070dc;
@@ -180,7 +180,7 @@ $icon-size: rem(30);
     .segment-item {
       position: absolute;
       width: 50%;
-      height: rem(30);
+      height: rem(26);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -214,8 +214,8 @@ $icon-size: rem(30);
 
     .active-circle {
       display: flex;
-      width: rem(30);
-      height: rem(30);
+      width: rem(26);
+      height: rem(26);
       padding: rem(5) rem(8);
       flex-direction: column;
       justify-content: center;
@@ -229,8 +229,8 @@ $icon-size: rem(30);
 
       &.home {
         color: #333;
-        left: rem(4);
-        transform: translateX(0);
+        left: rem(2);
+        transform: translateX(rem(2));
         text-indent: -9999px;
       }
 

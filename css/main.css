@@ -539,8 +539,8 @@
   border-radius: 1.25rem;
   background: #888;
   position: relative;
-  height: 2.25rem;
-  width: 4.875rem;
+  height: 2rem;
+  width: 4.5rem;
   color: #fff;
   text-align: center;
   font-size: 1rem;
@@ -557,7 +557,7 @@
 .app-header .header-left .segment-item {
   position: absolute;
   width: 50%;
-  height: 1.875rem;
+  height: 1.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,8 +583,8 @@
 }
 .app-header .header-left .active-circle {
   display: flex;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.625rem;
+  height: 1.625rem;
   padding: 0.3125rem 0.5rem;
   flex-direction: column;
   justify-content: center;
@@ -598,8 +598,8 @@
 }
 .app-header .header-left .active-circle.home {
   color: #333;
-  left: 0.25rem;
-  transform: translateX(0);
+  left: 0.125rem;
+  transform: translateX(0.125rem);
   text-indent: -9999px;
 }
 .app-header .header-left .active-circle.easy {
