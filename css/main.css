@@ -1316,6 +1316,9 @@
   box-shadow: 0px 2px 4px 1px #eaeaea;
   transition: background-color 0.2s ease;
 }
+.menu-section .menu-grid .menu-item:active {
+  background: #dfdfdf;
+}
 .menu-section .menu-grid .menu-item.first-menu {
   border: 1px solid #aaa;
 }
