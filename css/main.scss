@@ -491,6 +491,8 @@ $icon-size: rem(30);
       .segment-text {
         color: white;
         order: 1;
+        position: relative;
+        left: 2px;
       }
     }
   }

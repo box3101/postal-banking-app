@@ -838,6 +838,8 @@
 .mainSwiper .header .header-right .segment-control.active .segment-text {
   color: white;
   order: 1;
+  position: relative;
+  left: 2px;
 }
 
 .mainSwiper .header .header-right .quick-transfer {
