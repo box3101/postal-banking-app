@@ -79,7 +79,7 @@
           bg-green
         -->
 
-        <div class="main-slide-wrp bg-green">
+        <div class="main-slide-wrp">
           <div class="swiper mainSwiper">
             <div class="swiper-wrapper">
               <!-- 슬라이드 1 -->
@@ -174,20 +174,45 @@
                     <i class="icon icon-thumbnail"></i>
                     <div class="account-info">
                       <p class="account-label">
-                        <span>한도제한</span>
-                        <em>e-Post</em>
+                        <!-- <span>한도제한</span> -->
+                        <em>주거래</em>
                       </p>
                       <div class="flex items-center gap-6">
                         <span class="account-number">012345-23-123342</span>
-                        <button class="icon icon-sm icon-copy"></button>
+                        <button
+                          class="btn-copy-text"
+                          aria-label="계좌번호 복사"
+                        >
+                          복사
+                        </button>
                       </div>
                     </div>
                   </div>
-                  <div class="header-right">
+                  <div class="header-right flex items-center">
+                    <div class="segment-control-wrp">
+                      <div class="segment-control">
+                        <div class="segment-circle"></div>
+                        <div class="segment-text">빠른이체</div>
+                      </div>
+                    </div>
                     <button type="button" class="btn-more">
                       <i class="icon icon-sm icon-more"></i>
                     </button>
                   </div>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      const segmentControls = 
+                        document.querySelectorAll(
+                          ".main-slide-wrp .segment-control"
+                        );
+
+                      segmentControls.forEach((control) => {
+                        control.addEventListener("click", function () {
+                          this.classList.toggle("active");
+                        });
+                      });
+                    });
+                  </script>
                 </div>
 
                 <!-- 잔액 영역 -->
@@ -201,15 +226,17 @@
 
                   <!-- 지난달 대비 증감 영역 -->
                   <div class="balance-comparison">
+                    (
                     <span class="comparison-label">지난달 오늘 대비</span>
-                    <span class="comparison-value decrease"
-                      ><span class="icon-down"></span> 54,100</span
+                    <span class="comparison-value increase"
+                      ><span class="icon-up"></span> 54,100</span
                     >
+                    )
                   </div>
 
                   <!-- 버튼 영역 -->
                   <div class="action-buttons">
-                    <button class="btn-deposit">가져오기</button>
+                    <button class="btn-deposit">거래내역</button>
                     <button class="btn-transfer">이체하기</button>
                   </div>
 
@@ -278,7 +305,7 @@
         <div class="menu-section">
           <div class="menu-grid">
             <!-- 첫 번째 줄 -->
-            <div class="menu-item">
+            <div class="menu-item first-menu">
               <div class="menu-icon">
                 <img src="img/menu-icon1.svg" alt="전계좌 조회 아이콘" />
               </div>
@@ -426,19 +453,6 @@
           </div>
           <div class="nav-item">
             <img
-              src="img/fund-gnb-default-1.svg"
-              alt="생활"
-              class="icon-default"
-            />
-            <img
-              src="img/life-gnb-pressed.svg"
-              alt="생활"
-              class="icon-pressed"
-            />
-            <span class="nav-label">생활</span>
-          </div>
-          <div class="nav-item">
-            <img
               src="img/benefit-gnb-default.svg"
               alt="혜택"
               class="icon-default"
@@ -450,17 +464,19 @@
             />
             <span class="nav-label">혜택</span>
           </div>
-        </div>
-
-        <!-- fixed 챗봇-->
-        <div class="fixed-chatbot">
-          <button class="btn-chatbot-close">
-            <img src="img/chatbot-close.svg" alt="챗봇 닫기" />
-          </button>
-          <button class="btn-chatbot">
-            <img src="img/chatbot-icon.svg" alt="챗봇 아이콘" />
-            <p>챗봇</p>
-          </button>
+          <div class="nav-item active">
+            <img
+              src="img/mail-gnb-default.svg"
+              alt="모바일 우편함"
+              class="icon-default"
+            />
+            <img
+              src="img/mail-gnb-pressed.svg"
+              alt="모바일 우편함"
+              class="icon-pressed"
+            />
+            <span class="nav-label">모바일 <br> 우편함</span>
+          </div>
         </div>
       </div>
     </div>
