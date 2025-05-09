@@ -1532,10 +1532,11 @@
 .nav-label {
   color: #999;
   text-align: center;
-  font-size: 0.75rem;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
   font-weight: 600;
-  transition: color 0.2s ease;
-  margin-top: 0.3125rem;
+  line-height: 120%; /* 14.4px */
 }
 
 /*# sourceMappingURL=main.css.map */
